@@ -1,10 +1,13 @@
+import "./App.scss";
+// Importing components
 import Navigation from "./components/Navigation/Navigation";
+import Home from "./components/Home/Home";
 
 function App() {
   return (
     <div className="App">
-      <h2>This is the main page</h2>
       <Navigation />
+      <Home />
     </div>
   );
 }
