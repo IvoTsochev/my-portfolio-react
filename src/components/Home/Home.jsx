@@ -1,6 +1,14 @@
 import React from "react";
 import "./Home.scss";
 import Typed from "react-typed";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTwitter,
+  faFacebook,
+  faInstagram,
+  faLinkedin,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 
 function Home() {
   return (
@@ -8,7 +16,7 @@ function Home() {
       <div className="home-overlay"></div>
       <div className="home-info">
         <h1>Ivaylo Tsochev</h1>
-        <br />
+        {/* <br /> */}
         <div className="im-wrapper">
           <span>I am </span>
           <Typed
@@ -19,6 +27,23 @@ function Home() {
             loop
           ></Typed>
         </div>
+        <ul className="social-media">
+          <li className="twitter">
+            <FontAwesomeIcon icon={faTwitter} />
+          </li>
+          <li className="facebook">
+            <FontAwesomeIcon icon={faFacebook} />
+          </li>
+          <li className="instagram">
+            <FontAwesomeIcon icon={faInstagram} />
+          </li>
+          <li className="linkedin">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </li>
+          <li className="github">
+            <FontAwesomeIcon icon={faGithub} />
+          </li>
+        </ul>
       </div>
     </div>
   );

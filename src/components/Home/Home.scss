@@ -14,8 +14,18 @@
     }
     .im-wrapper {
       font-size: 2rem;
+      margin-top: 1rem;
       .Iam-type {
         color: rgb(22, 22, 222);
+      }
+    }
+    .social-media {
+      display: flex;
+      margin-top: 2rem;
+      list-style-type: none;
+      li {
+        margin-right: 3rem;
+        font-size: 1.7rem;
       }
     }
   }
