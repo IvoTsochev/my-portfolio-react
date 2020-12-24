@@ -1,19 +1,25 @@
 import React from "react";
 import "./Home.scss";
-import styled from "styled-components";
-
-const MainTitle = styled.h1`
-  font-size: 5rem;
-  z-index: 10;
-`;
+import Typed from "react-typed";
 
 function Home() {
   return (
     <div id="home">
-      <div className="home-info">
-        <MainTitle>Ivaylo Tsochev</MainTitle>
-      </div>
       <div className="home-overlay"></div>
+      <div className="home-info">
+        <h1>Ivaylo Tsochev</h1>
+        <br />
+        <div className="im-wrapper">
+          <span>I am </span>
+          <Typed
+            className="Iam-type"
+            strings={["Frontend developer", "Freelancer"]}
+            typeSpeed={40}
+            backSpeed={50}
+            loop
+          ></Typed>
+        </div>
+      </div>
     </div>
   );
 }
