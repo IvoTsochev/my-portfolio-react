@@ -16,7 +16,6 @@ function Home() {
       <div className="home-overlay"></div>
       <div className="home-info">
         <h1>Ivaylo Tsochev</h1>
-        {/* <br /> */}
         <div className="im-wrapper">
           <span>I am </span>
           <Typed
