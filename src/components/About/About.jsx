@@ -3,13 +3,15 @@ import "./About.scss";
 import Me from "../../img/me.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+// Styles
+import { H2Title } from "../../StyledComponents-G";
 
 const About = () => {
   return (
     <div id="about">
       <div className="about-wrapper">
         <div className="about-upperSection">
-          <h2>ABOUT</h2>
+          <H2Title>ABOUT</H2Title>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum
             debitis nihil maiores ex laboriosam laborum expedita officia
