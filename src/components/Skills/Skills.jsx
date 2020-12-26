@@ -23,25 +23,25 @@ const Skills = () => {
             </div>
             <p>SASS</p>
             <div className="skill-container">
-              <div className="skill sass">90%</div>
+              <div className="skill sass">50%</div>
             </div>
             <p>Wordpress</p>
             <div className="skill-container">
-              <div className="skill wordpress">90%</div>
+              <div className="skill wordpress">65%</div>
             </div>
           </div>
           <div className="skills-rightColumn">
             <p>REACT</p>
             <div className="skill-container">
-              <div className="skill react">90%</div>
+              <div className="skill react">43%</div>
             </div>
             <p>UI & UX</p>
             <div className="skill-container">
-              <div className="skill ui">90%</div>
+              <div className="skill ui">22%</div>
             </div>
             <p>REACT REDUX</p>
             <div className="skill-container">
-              <div className="skill redux">90%</div>
+              <div className="skill redux">5%</div>
             </div>
           </div>
         </div>

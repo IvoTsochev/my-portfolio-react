@@ -6,9 +6,9 @@ export const H2Title = styled.h2`
   justify-content: center;
   flex-direction: column;
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 3rem;
   &:after {
     content: "_______";
-    color: rgb(22, 22, 222);
+    color: rgb(30, 150, 230);
   }
 `;
