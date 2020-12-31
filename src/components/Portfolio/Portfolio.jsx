@@ -9,11 +9,14 @@ import { H2Title } from "../../StyledComponents-G";
 const Portfolio = () => {
   // State
   const [Portfolios, setPortfolios] = useState([]);
+  const [filterr, setFilter] = useState("all");
   const [IsLoaded, setIsLoaded] = useState(false);
 
+  // portfolios URL
   const baseURL =
     "https://resources.ivaylotsochev.com/wp-json/wp/v2/portfolios";
 
+  // fetching portfolios
   // Effect
   useEffect(() => {
     axios
@@ -25,6 +28,17 @@ const Portfolio = () => {
       .catch((err) => console.error(`Sooomething went wrong ${err}`));
   }, []);
 
+  useEffect(() => {
+    // setPortfolios([]);
+
+    const filtered = Portfolios.map((item) => ({
+      ...item,
+      filtered: item.acf.portfolio_type.includes(filterr),
+    }));
+
+    setPortfolios(filtered);
+  }, [filterr]);
+
   return (
     <div id="portfolio">
       <div className="portfolio-wrapper">
@@ -35,12 +49,50 @@ const Portfolio = () => {
           quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
           fugiat sit in iste officiis commodi quidem hic quas.
         </p>
-        {Portfolios.map((singlePortfolio) => (
-          <SinglePortfolioItem
-            key={singlePortfolio.id}
-            singlePortfolio={singlePortfolio}
-          />
-        ))}
+        <div className="portfolio-nav">
+          <div className="portfolio-nav-labels">
+            <a
+              href="/#"
+              active={filterr === "all"}
+              onClick={() => setFilter("all")}
+            >
+              ALL
+            </a>
+            <a
+              href="/#"
+              active={filterr === "clients"}
+              onClick={() => setFilter("clients")}
+            >
+              CLIENTS
+            </a>
+            <a
+              href="/#"
+              active={filterr === "demo"}
+              onClick={() => setFilter("demo")}
+            >
+              DEMO
+            </a>
+            <a
+              href="/#"
+              active={filterr === "oldPortfolios"}
+              onClick={() => setFilter("oldPortfolios")}
+            >
+              MY OLD PORTFOLIOS
+            </a>
+          </div>
+        </div>
+        <div className="singlePortfolioItem-wrapper">
+          {Portfolios.map((singlePortfolio) =>
+            singlePortfolio.filtered === true ? (
+              <SinglePortfolioItem
+                key={singlePortfolio.id}
+                singlePortfolio={singlePortfolio}
+              />
+            ) : (
+              ""
+            )
+          )}
+        </div>
       </div>
     </div>
   );
