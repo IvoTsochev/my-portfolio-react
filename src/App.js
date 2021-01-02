@@ -7,17 +7,23 @@ import Skills from "./components/Skills/Skills";
 import Resume from "./components/Resume/Resume";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Services from "./components/ServicesComponent/Services";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <div className="App">
       <Navigation />
+
       <Home />
       <About />
       <Skills />
       <Resume />
       <Portfolio />
       <Services />
+      <Contact />
+
+      <Footer />
     </div>
   );
 }

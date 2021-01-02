@@ -7,7 +7,7 @@ const Resume = () => {
   return (
     <div id="resume">
       <div className="resume-wrapper">
-        <H2Title>Resume</H2Title>
+        <H2Title>RESUME</H2Title>
         <p>
           Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
           aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos

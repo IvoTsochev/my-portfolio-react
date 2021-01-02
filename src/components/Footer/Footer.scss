@@ -1,0 +1,16 @@
+#footer {
+  background-color: #dddddd;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  p {
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+  }
+}

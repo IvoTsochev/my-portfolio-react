@@ -1,0 +1,33 @@
+#services {
+  margin-bottom: 4rem;
+  .services-wrapper {
+    width: 60%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    .services-cards {
+      display: flex;
+      .card {
+        flex-basis: 350px;
+        -webkit-box-shadow: 0px 0px 73px 2px rgba(232, 232, 232, 0.51);
+        -moz-box-shadow: 0px 0px 73px 2px rgba(232, 232, 232, 0.51);
+        box-shadow: 0px 0px 73px 2px rgba(232, 232, 232, 0.51);
+        padding: 2rem;
+        margin: 1rem;
+        transition: all 0.3s ease;
+        border-radius: 5px;
+        &:hover {
+          -webkit-box-shadow: 0px 0px 73px 2px rgba(214, 207, 214, 1);
+          -moz-box-shadow: 0px 0px 73px 2px rgba(214, 207, 214, 1);
+          box-shadow: 0px 0px 73px 2px rgba(214, 207, 214, 1);
+        }
+        h3 {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
