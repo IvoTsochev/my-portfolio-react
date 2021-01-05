@@ -54,3 +54,42 @@
     }
   }
 }
+
+
+@media (max-width: 500px) {
+  #resume {
+
+    .resume-wrapper {
+      width: 95%;
+      .resume-stats {
+        flex-direction: column;
+        .educationAndSumary,
+        .professional-experience {
+
+          h3 {
+       
+          }
+          .resume-card {
+      
+            &:before {
+              content: " ";
+       
+            }
+            h4 {
+         
+            }
+            p {
+            }
+            ul {
+              li {
+              }
+            }
+          }
+        }
+        .professional-experience {
+
+        }
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ import wordpress from "../../img/wordpress.svg";
 import react from "../../img/react.svg";
 import html from "../../img/html.svg";
 import hosting from "../../img/hosting.svg";
+
 // Styles
 import "./Services.scss";
 import { H2Title } from "../../StyledComponents-G";

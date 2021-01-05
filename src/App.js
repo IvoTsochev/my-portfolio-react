@@ -1,3 +1,5 @@
+import { BrowserRouter as Router } from "react-router-dom";
+// Styles
 import "./App.scss";
 // Importing components
 import Navigation from "./components/Navigation/Navigation";
@@ -14,7 +16,6 @@ function App() {
   return (
     <div className="App">
       <Navigation />
-
       <Home />
       <About />
       <Skills />

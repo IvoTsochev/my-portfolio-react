@@ -8,7 +8,6 @@
     flex-direction: column;
     text-align: center;
     p {
-      // margin-bottom: 2rem;
     }
     .portfolio-nav {
       margin-top: 3rem;
@@ -32,8 +31,40 @@
     .singlePortfolioItem-wrapper {
       display: flex;
       flex-wrap: wrap;
+      margin-top: 1rem;
       .singlePortfolioItem {
         flex: 30%;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  #portfolio {
+
+    .portfolio-wrapper {
+      width: 95%;
+
+      p {
+      }
+      .portfolio-nav {
+
+        .portfolio-nav-labels {
+
+          a {
+ 
+            &:hover {
+            }
+          }
+        }
+      }
+      .singlePortfolioItem-wrapper {
+
+        .singlePortfolioItem {
+          h4 {
+            margin-top: 2rem;
+          }
+        }
       }
     }
   }

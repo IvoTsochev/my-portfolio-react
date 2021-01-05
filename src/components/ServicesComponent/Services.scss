@@ -31,3 +31,25 @@
     }
   }
 }
+
+
+@media (max-width: 500px) {
+  #services {
+    .services-wrapper {
+      width: 95%;
+
+      .services-cards {
+        flex-direction: column;
+        .card {
+
+          &:hover {
+
+          }
+          h3 {
+
+          }
+        }
+      }
+    }
+  }
+}

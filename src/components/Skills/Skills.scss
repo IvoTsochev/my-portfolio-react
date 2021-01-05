@@ -56,3 +56,48 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  #skills {
+
+    .skills-wrapper {
+      width: 95%;
+    }
+    .skills-upperSection {
+    }
+    .skills-lowerSection {
+      flex-direction: column;
+
+      .skill-container {
+
+        .skill {
+ 
+        }
+        .html {
+        
+        }
+        .sass {
+       
+        }
+        .wordpress {
+    
+        }
+        .react {
+       
+        }
+        .ui {
+      
+        }
+        .redux {
+
+        }
+      }
+  
+      .skills-leftColumn {
+      margin-right: 0rem;
+      }
+      .skills-rightColumn {
+      }
+    }
+  }
+}
