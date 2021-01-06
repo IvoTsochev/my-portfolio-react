@@ -11,11 +11,13 @@ import Portfolio from "./components/Portfolio/Portfolio";
 import Services from "./components/ServicesComponent/Services";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import Hamburger from "./components/Hamburger/Hamburger";
 
 function App() {
   return (
     <div className="App">
       <Navigation />
+      <Hamburger />
       <Home />
       <About />
       <Skills />
