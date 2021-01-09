@@ -39,11 +39,11 @@ const Resume = () => {
               <p>Softuni University - Sofia</p>
             </div>
             <div className="resume-card">
-              <h4>Software Engineering</h4>
+              <h4>Accounting</h4>
               <p>
-                <strong>2018 - Present</strong>
+                <strong>2007 - 2011</strong>
               </p>
-              <p>Softuni University - Sofia</p>
+              <p>"St. Cyril and St. Methodius" University of Veliko Tarnovo</p>
             </div>
           </div>
           <div className="professional-experience">

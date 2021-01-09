@@ -4,6 +4,7 @@ import Me from "../../img/me.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { Link, BrowserRouter as Router } from "react-router-dom";
+
 // Styles
 import { H2Title } from "../../StyledComponents-G";
 
@@ -15,11 +16,11 @@ const About = () => {
           <div className="about-upperSection">
             <H2Title>ABOUT</H2Title>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum
-              debitis nihil maiores ex laboriosam laborum expedita officia
-              delectus quia cupiditate. Esse labore iste doloremque sit saepe et
-              corporis quibusdam, exercitationem minima asperiores quia
-              voluptates!
+              Passioned about creating awesome websites and delivering the best
+              user experience. I started with online courses on Wordpress and
+              later on HTML, CSS, JavaScript, and lately with React, and
+              creating my first websites for friends like portfolio websites and
+              eCommerce.
             </p>
           </div>
           <div className="about-lowerSection">
@@ -48,7 +49,7 @@ const About = () => {
                         icon={faChevronRight}
                       />{" "}
                       <span>Age: </span>
-                      31
+                      32
                     </li>
                     <li>
                       <FontAwesomeIcon

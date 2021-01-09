@@ -17,6 +17,8 @@
         h3 {
           margin-bottom: 1rem;
           margin-top: 1rem;
+          font-size: 1.4rem;
+          font-weight: 400;
         }
         .resume-card {
           padding-left: 2rem;
@@ -55,28 +57,21 @@
   }
 }
 
-
 @media (max-width: 500px) {
   #resume {
-
     .resume-wrapper {
       width: 95%;
       .resume-stats {
         flex-direction: column;
         .educationAndSumary,
         .professional-experience {
-
           h3 {
-       
           }
           .resume-card {
-      
             &:before {
               content: " ";
-       
             }
             h4 {
-         
             }
             p {
             }
@@ -87,7 +82,6 @@
           }
         }
         .professional-experience {
-
         }
       }
     }

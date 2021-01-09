@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 // Styles
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const Hamburger = () => {
   // State
@@ -35,7 +35,7 @@ const HamIcon = styled.div`
     height: 50px;
     position: absolute;
     top: 2%;
-    left: 5%;
+    right: 5%;
     .bar {
       width: 35px;
       height: 5px;

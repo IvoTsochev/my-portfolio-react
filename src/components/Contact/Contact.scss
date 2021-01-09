@@ -28,6 +28,12 @@
         border-radius: 20px;
         background-color: rgb(30, 150, 230);
         color: #fff;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background-color: #fff;
+          border: 1px solid rgb(30, 150, 230);
+          color: rgb(30, 150, 230);
+        }
       }
       .name-and-email-container {
         display: flex;
@@ -47,9 +53,7 @@
     .contact-wrapper {
       width: 95%;
       .contact-form {
-     
         input {
-     
           &:focus {
           }
         }
@@ -58,7 +62,6 @@
           }
         }
         .contact-submit {
-  
         }
         .name-and-email-container {
           input {

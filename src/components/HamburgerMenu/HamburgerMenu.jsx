@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 const HamburgerMenu = () => {
   return (
@@ -11,17 +11,17 @@ const HamburgerMenu = () => {
 
 export default HamburgerMenu;
 
-const expand = keyframes`
-    0% {
-      right: 100%;
-    }
-    50% {
-      right: 75%;
-    }
-    100% {
-      right: 50%;
-    }
-`;
+// const expand = keyframes`
+//     0% {
+//       right: 100%;
+//     }
+//     50% {
+//       right: 75%;
+//     }
+//     100% {
+//       right: 50%;
+//     }
+// `;
 
 const HamMenu = styled.div`
   display: none;
@@ -34,8 +34,7 @@ const HamMenu = styled.div`
     bottom: 0;
     left: 0;
     background-color: purple;
-    animation-name: ${expand};
-    animation-duration: 0.3s;
-    animation-timing-function: linear;
+    /* animation-duration: 0.3s;
+    animation-timing-function: linear; */
   }
 `;

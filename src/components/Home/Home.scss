@@ -19,12 +19,19 @@
         color: rgb(30, 150, 230);
       }
     }
-    .social-media {
+    ul.social-media {
       display: flex;
       margin-top: 2rem;
       list-style-type: none;
       a {
         color: rgb(90, 90, 90);
+        &:hover {
+          svg {
+            path {
+              fill: rgb(30, 150, 230);
+            }
+          }
+        }
       }
       li {
         margin-right: 3rem;
@@ -45,24 +52,20 @@
 
 @media (max-width: 500px) {
   #home {
-
     .home-info {
-
       h1 {
         font-size: 2rem;
       }
       .im-wrapper {
         font-size: 1.5rem;
-  
-        .Iam-type {
 
+        .Iam-type {
           span {
             font-size: 1.5rem;
           }
         }
       }
-      .social-media {
-
+      ul.social-media {
         a {
         }
         li {
@@ -71,7 +74,6 @@
       }
     }
     .home-overlay {
-
     }
   }
 }
