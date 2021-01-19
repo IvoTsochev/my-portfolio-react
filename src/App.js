@@ -1,4 +1,4 @@
-import { BrowserRouter as Router } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 // Styles
 import "./App.scss";
 // Importing components
@@ -12,19 +12,25 @@ import Services from "./components/ServicesComponent/Services";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Hamburger from "./components/Hamburger/Hamburger";
+import Blogs from "./Pages/Blogs/Blogs";
 
 function App() {
   return (
     <div className="App">
-      <Navigation />
-      <Hamburger />
-      <Home />
-      <About />
-      <Skills />
-      <Resume />
-      <Portfolio />
-      <Services />
-      <Contact />
+      <Route path="/" exact>
+        <Navigation />
+        <Hamburger />
+        <Home />
+        <About />
+        <Skills />
+        <Resume />
+        <Portfolio />
+        <Services />
+        <Contact />
+      </Route>
+      <Route path="/blogs">
+        <Blogs />
+      </Route>
 
       <Footer />
     </div>

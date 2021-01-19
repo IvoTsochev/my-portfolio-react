@@ -24,7 +24,7 @@ const About = () => {
             </p>
           </div>
           <div className="about-lowerSection">
-            <img src={Me} alt="photo of me" />
+            <img src={Me} alt="Ivaylo Tsochev" />
             <div className="about-lowerSection-inner">
               <h3>Frontend Developer & Freelancer</h3>
               <p>
@@ -82,7 +82,7 @@ const About = () => {
                         icon={faChevronRight}
                       />{" "}
                       <span>Degree: </span>
-                      Bachelor
+                      Bachelor Accountant
                     </li>
                     <li>
                       <FontAwesomeIcon

@@ -18,7 +18,7 @@ const Hamburger = () => {
         <div className="bar bar2" />
         <div className="bar bar3" />
       </HamIcon>
-      {isOpen ? <HamburgerMenu /> : ""}
+      {isOpen ? <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} /> : ""}
     </>
   );
 };

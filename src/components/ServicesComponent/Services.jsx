@@ -14,34 +14,36 @@ const Services = () => {
       <div className="services-wrapper">
         <H2Title>SERVICES</H2Title>
         <p>
-          Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-          aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-          quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-          fugiat sit in iste officiis commodi quidem hic quas.
+          Variety of services related for building your new website. Most of the
+          clients are choosing Wordpress since it's easier to manage. Hosting
+          service is also available for storing your website and emails as well.
         </p>
         <div className="services-cards">
           <div className="react-card card">
             <img src={react} alt="react icon" />
-            <h3>Loren Ipsum</h3>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <h3>React</h3>
+            <p>Building web apps using React.</p>
           </div>
 
           <div className="wordpress-card card">
             <img src={wordpress} alt="wordpress icon" />
-            <h3>Loren Ipsum</h3>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <h3>Wordpress</h3>
+            <p>
+              Building easy to manage small to medium shops and portfolio
+              website.
+            </p>
           </div>
 
           <div className="html-card card">
             <img src={html} alt="html icon" />
-            <h3>Loren Ipsum</h3>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <h3>HTML, CSS & JS</h3>
+            <p>Simple websites without CMS or framework.</p>
           </div>
 
           <div className="hosting-card card">
             <img src={hosting} alt="hosting icon" />
-            <h3>Loren Ipsum</h3>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <h3>Hosting</h3>
+            <p>Offering a hosting for your website/web app.</p>
           </div>
         </div>
       </div>
