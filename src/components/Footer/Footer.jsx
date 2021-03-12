@@ -16,8 +16,7 @@ const Footer = () => {
     <div id="footer">
       <h2>Ivaylo Tsochev</h2>
       <p>
-        Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi
-        fuga maxime saepe commodi placeat.
+        Feel free to contact via the social networks or the contact form above.
       </p>
       <div className="footer-social">
         <Router>

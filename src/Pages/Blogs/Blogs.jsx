@@ -14,6 +14,7 @@ const Blogs = () => {
     axios
       .get("https://resources.ivaylotsochev.com/wp-json/wp/v2/posts")
       .then((res) => {
+        console.log(res.data);
         setPosts(res.data);
         setIsLoaded(true);
       })
@@ -26,7 +27,7 @@ const Blogs = () => {
     <div className="blogs">
       <h1>This is the blogs page</h1>
       {posts.map((singleBlog) => (
-        <BlogPost key={singleBlog.id} singleBlog={singleBlog} />
+        <BlogPost key={singleBlog.id} singleBlog={singleBlog} title={singleBlog.title.rendered} />
       ))}
     </div>
   );

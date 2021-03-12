@@ -27,11 +27,11 @@ const About = () => {
             <img src={Me} alt="Ivaylo Tsochev" />
             <div className="about-lowerSection-inner">
               <h3>Frontend Developer & Freelancer</h3>
-              <p>
+              {/* <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Provident quam tempore porro suscipit aut modi, fugiat officiis
                 a assumenda fuga!
-              </p>
+              </p> */}
               <div className="about-lowerSection-inner-stats">
                 <div className="firstColumn">
                   <ul>
@@ -116,7 +116,7 @@ const About = () => {
                   </ul>
                 </div>
               </div>
-              <p>
+              {/* <p>
                 Officiis eligendi itaque labore et dolorum mollitia officiis
                 optio vero. Quisquam sunt adipisci omnis et ut. Nulla
                 accusantium dolor incidunt officia tempore. Et eius omnis.
@@ -124,7 +124,7 @@ const About = () => {
                 consectetur qui quia repellendus itaque neque. Aliquid amet
                 quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis
                 culpa magni laudantium dolores.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

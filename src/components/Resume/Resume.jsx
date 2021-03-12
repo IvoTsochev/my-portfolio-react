@@ -8,22 +8,20 @@ const Resume = () => {
     <div id="resume">
       <div className="resume-wrapper">
         <H2Title>RESUME</H2Title>
-        <p>
+        {/* <p>
           Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
           aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
           quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
           fugiat sit in iste officiis commodi quidem hic quas.
-        </p>
+        </p> */}
         <div className="resume-stats">
           <div className="educationAndSumary">
             <h3>Sumary</h3>
             <div className="resume-card">
               <h4>Ivaylo Tsochev</h4>
               <p>
-                Innovative and deadline-driven Graphic Designer with 3+ years of
-                experience designing and developing user-centered digital/print
-                marketing material from initial concept to final, polished
-                deliverable.
+                Innovative and deadline-driven Front-end developer with 2+ years of
+                experience developing user-friendly, clean-looking websites and apps.
               </p>
               <ul>
                 <li>Born in Troyan, lives in Sofia, Bulgaria</li>

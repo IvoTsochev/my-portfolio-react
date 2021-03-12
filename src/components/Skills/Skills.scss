@@ -37,12 +37,12 @@
         width: 43%;
         background-color: rgb(30, 150, 230);
       }
-      .ui {
-        width: 22%;
+      .javascript {
+        width: 68%;
         background-color: rgb(30, 150, 230);
       }
       .redux {
-        width: 5%;
+        width: 10%;
         background-color: rgb(30, 150, 230);
       }
     }
@@ -59,7 +59,6 @@
 
 @media (max-width: 500px) {
   #skills {
-
     .skills-wrapper {
       width: 95%;
     }
@@ -69,32 +68,24 @@
       flex-direction: column;
 
       .skill-container {
-
         .skill {
- 
         }
         .html {
-        
         }
         .sass {
-       
         }
         .wordpress {
-    
         }
         .react {
-       
         }
         .ui {
-      
         }
         .redux {
-
         }
       }
-  
+
       .skills-leftColumn {
-      margin-right: 0rem;
+        margin-right: 0rem;
       }
       .skills-rightColumn {
       }

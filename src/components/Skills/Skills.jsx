@@ -9,10 +9,7 @@ const Skills = () => {
         <div className="skills-upperSection">
           <H2Title>SKILLS</H2Title>
           <p>
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-            quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-            fugiat sit in iste officiis commodi quidem hic quas.
+            Most of the skills I have and constantly want to improve, are front-end oriented and the main priority is React.
           </p>
         </div>
         <div className="skills-lowerSection">
@@ -35,13 +32,13 @@ const Skills = () => {
             <div className="skill-container">
               <div className="skill react">43%</div>
             </div>
-            <p>UI & UX</p>
+            <p>JavaScript</p>
             <div className="skill-container">
-              <div className="skill ui">22%</div>
+              <div className="skill javascript">68%</div>
             </div>
-            <p>REACT REDUX</p>
+            <p>REACT REDUX & CONTEXT</p>
             <div className="skill-container">
-              <div className="skill redux">5%</div>
+              <div className="skill redux">10%</div>
             </div>
           </div>
         </div>
