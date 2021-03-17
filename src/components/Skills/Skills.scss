@@ -50,12 +50,55 @@
     .skills-leftColumn {
       flex: 50%;
       margin-right: 1rem;
+      p {
+        margin-bottom: .3rem;
+      }
     }
     .skills-rightColumn {
       flex: 50%;
+      p {
+        margin-bottom: .3rem;
+      }
     }
   }
 }
+
+@media (max-width: 800px) {
+  #skills {
+    .skills-wrapper {
+      width: 69%;
+    }
+    .skills-upperSection {
+    }
+    .skills-lowerSection {
+      flex-direction: column;
+
+      .skill-container {
+        .skill {
+        }
+        .html {
+        }
+        .sass {
+        }
+        .wordpress {
+        }
+        .react {
+        }
+        .ui {
+        }
+        .redux {
+        }
+      }
+
+      .skills-leftColumn {
+        margin-right: 0rem;
+      }
+      .skills-rightColumn {
+      }
+    }
+  }
+}
+
 
 @media (max-width: 500px) {
   #skills {
