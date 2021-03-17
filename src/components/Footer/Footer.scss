@@ -38,6 +38,24 @@
   }
 }
 
+@media (max-width: 768px) {
+  #footer {
+    h2 {
+    }
+    p {
+    }
+    .footer-social {
+      ul {
+        li {
+          a {
+            padding-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 500px) {
   #footer {
     h2 {

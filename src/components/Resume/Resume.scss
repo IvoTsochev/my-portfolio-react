@@ -22,6 +22,7 @@
         }
         .resume-card {
           padding-left: 2rem;
+          padding-right: 2rem;
           border-left: 2px solid rgb(30, 150, 230);
           position: relative;
           &:before {
@@ -52,6 +53,100 @@
         display: flex;
         flex-direction: column;
         flex: 50%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  #resume {
+    .resume-wrapper {
+      width: 80%;
+      .resume-stats {
+        flex-direction: row;
+        .educationAndSumary,
+        .professional-experience {
+          h3 {
+          }
+          .resume-card {
+            &:before {
+              content: " ";
+            }
+            h4 {
+            }
+            p {
+            }
+            ul {
+              li {
+              }
+            }
+          }
+        }
+        .professional-experience {
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 960px) {
+  #resume {
+    .resume-wrapper {
+      width: 80%;
+      .resume-stats {
+        flex-direction: row;
+        .educationAndSumary,
+        .professional-experience {
+          h3 {
+          }
+          .resume-card {
+            &:before {
+              content: " ";
+            }
+            h4 {
+            }
+            p {
+            }
+            ul {
+              li {
+              }
+            }
+          }
+        }
+        .professional-experience {
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #resume {
+    .resume-wrapper {
+      width: 68%;
+      .resume-stats {
+        flex-direction: column;
+        .educationAndSumary,
+        .professional-experience {
+          h3 {
+          }
+          .resume-card {
+            &:before {
+              content: " ";
+            }
+            h4 {
+            }
+            p {
+            }
+            ul {
+              li {
+              }
+            }
+          }
+        }
+        .professional-experience {
+        }
       }
     }
   }

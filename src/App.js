@@ -25,7 +25,7 @@ function App() {
         <Skills />
         <Resume />
         <Portfolio />
-        <Services />
+        {/* <Services /> */}
         <Contact />
       </Route>
       <Route path="/blogs">

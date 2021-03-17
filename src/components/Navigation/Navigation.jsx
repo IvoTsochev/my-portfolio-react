@@ -71,12 +71,12 @@ function Navigation() {
           </li>
         </a>
 
-        <li>
+        {/* <li>
           <Link to="/blogs">
             <FontAwesomeIcon className="icon icon-blog" icon={faNewspaper} />
             <span>Blog</span>
           </Link>
-        </li>
+        </li> */}
       </ul>
     </div>
   );

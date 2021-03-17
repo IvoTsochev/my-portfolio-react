@@ -23,7 +23,7 @@ function Home() {
             <span>I am </span>
             <Typed
               className="Iam-type"
-              strings={["Frontend developer", "Freelancer"]}
+              strings={["Front-end developer", "Freelancer"]}
               typeSpeed={40}
               backSpeed={50}
               loop
