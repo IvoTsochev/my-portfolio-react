@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./SinglePortfolioItem.scss";
 import axios from "axios";
 

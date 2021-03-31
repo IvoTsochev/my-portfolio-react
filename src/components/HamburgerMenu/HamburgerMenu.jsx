@@ -1,4 +1,3 @@
-import React from "react";
 // Styles
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,7 +6,6 @@ import {
   faAddressCard,
   faFile,
   faImages,
-  faTools,
   faAddressBook,
 } from "@fortawesome/free-solid-svg-icons";
 import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
@@ -51,13 +49,13 @@ const HamburgerMenu = ({ isOpen, setIsOpen }) => {
             <span>Portfolio</span>
           </li>
         </a>
-
+{/* 
         <a href="#services" onClick={closeHamHandler}>
           <li>
             <FontAwesomeIcon className="icon icon-services" icon={faTools} />
             <span>Services</span>
           </li>
-        </a>
+        </a> */}
 
         <a href="#contact" onClick={closeHamHandler}>
           <li>

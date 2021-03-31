@@ -1,4 +1,3 @@
-import React from "react";
 import "./About.scss";
 import Me from "../../img/me.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 // Styles
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 const Hamburger = () => {
   // State

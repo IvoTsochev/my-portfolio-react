@@ -1,4 +1,3 @@
-import React from "react";
 import Typed from "react-typed";
 import { Link, BrowserRouter as Router } from "react-router-dom";
 // Styles

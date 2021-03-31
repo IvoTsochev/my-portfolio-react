@@ -1,4 +1,3 @@
-import React from "react";
 import wordpress from "../../img/wordpress.svg";
 import react from "../../img/react.svg";
 import html from "../../img/html.svg";

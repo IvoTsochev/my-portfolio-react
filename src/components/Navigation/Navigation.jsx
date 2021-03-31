@@ -1,14 +1,11 @@
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
   faAddressCard,
   faFile,
   faImages,
-  faTools,
   faAddressBook,
 } from "@fortawesome/free-solid-svg-icons";
-import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 // Styles
@@ -53,13 +50,13 @@ function Navigation() {
             <span>Portfolio</span>
           </li>
         </a>
-
+{/* 
         <a href="#services">
           <li>
             <FontAwesomeIcon className="icon icon-services" icon={faTools} />
             <span>Services</span>
           </li>
-        </a>
+        </a> */}
 
         <a href="#contact">
           <li>

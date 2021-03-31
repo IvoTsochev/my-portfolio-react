@@ -1,4 +1,3 @@
-import React from "react";
 import "./Resume.scss";
 // Styles
 import { H2Title } from "../../StyledComponents-G";

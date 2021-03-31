@@ -1,4 +1,3 @@
-import React from "react";
 import "./BlogPost.scss";
 
 const BlogPost = ({ singleBlog }) => {
