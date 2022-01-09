@@ -36,6 +36,13 @@
       }
     }
   }
+  .crafted,
+  .crafted:visited {
+    a {
+      color: orange;
+      text-decoration: none;
+    }
+  }
 }
 
 @media (max-width: 768px) {
