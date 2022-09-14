@@ -23,7 +23,7 @@ const About = () => {
             </p>
           </div>
           <div className="about-lowerSection">
-            <img src={Me} alt="Ivaylo Tsochev" />
+            <img src={ Me } alt="Ivaylo Tsochev" />
             <div className="about-lowerSection-inner">
               <h3>Frontend Developer & Freelancer</h3>
               {/* <p>
@@ -37,27 +37,19 @@ const About = () => {
                     <li>
                       <FontAwesomeIcon
                         className="arrow-icon"
-                        icon={faChevronRight}
-                      />{" "}
-                      <span>Birthday: </span>
-                      20 July 1988
-                    </li>
-                    <li>
-                      <FontAwesomeIcon
-                        className="arrow-icon"
-                        icon={faChevronRight}
-                      />{" "}
+                        icon={ faChevronRight }
+                      />{ " " }
                       <span>Age: </span>
-                      32
+                      34
                     </li>
                     <li>
                       <FontAwesomeIcon
                         className="arrow-icon"
-                        icon={faChevronRight}
-                      />{" "}
+                        icon={ faChevronRight }
+                      />{ " " }
                       <span>Website: </span>
                       <Link
-                        to={{ pathname: "https://www.ivaylotsochev.com" }}
+                        to={ { pathname: "https://www.ivaylotsochev.com" } }
                         target="_blank"
                       >
                         www.ivaylotsochev.com
@@ -66,8 +58,8 @@ const About = () => {
                     <li>
                       <FontAwesomeIcon
                         className="arrow-icon"
-                        icon={faChevronRight}
-                      />{" "}
+                        icon={ faChevronRight }
+                      />{ " " }
                       <span>City: </span>
                       Sofia, Bulgaria
                     </li>
@@ -78,52 +70,30 @@ const About = () => {
                     <li>
                       <FontAwesomeIcon
                         className="arrow-icon"
-                        icon={faChevronRight}
-                      />{" "}
+                        icon={ faChevronRight }
+                      />{ " " }
                       <span>Degree: </span>
                       Bachelor Accountant
                     </li>
                     <li>
                       <FontAwesomeIcon
                         className="arrow-icon"
-                        icon={faChevronRight}
-                      />{" "}
+                        icon={ faChevronRight }
+                      />{ " " }
                       <span>Email: </span>
-                      ivo.tsochev@gmail.com
+                      ivaylo@headless.team
                     </li>
                     <li>
                       <FontAwesomeIcon
                         className="arrow-icon"
-                        icon={faChevronRight}
-                      />{" "}
-                      <span>Freelance: </span>
-                      Available
-                    </li>
-                    <li>
-                      <FontAwesomeIcon
-                        className="arrow-icon"
-                        icon={faChevronRight}
-                      />{" "}
+                        icon={ faChevronRight }
+                      />{ " " }
                       <span>Employer: </span>
-                      <Link
-                        to={{ pathname: "https://www.littlevitamin.com" }}
-                        target="_blank"
-                      >
-                        Little Vitamin
-                      </Link>
+                      Devi8 Studio
                     </li>
                   </ul>
                 </div>
               </div>
-              {/* <p>
-                Officiis eligendi itaque labore et dolorum mollitia officiis
-                optio vero. Quisquam sunt adipisci omnis et ut. Nulla
-                accusantium dolor incidunt officia tempore. Et eius omnis.
-                Cupiditate ut dicta maxime officiis quidem quia. Sed et
-                consectetur qui quia repellendus itaque neque. Aliquid amet
-                quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis
-                culpa magni laudantium dolores.
-              </p> */}
             </div>
           </div>
         </div>

@@ -1,3 +1,4 @@
+// Styling
 import "./Skills.scss";
 import { H2Title } from "../../StyledComponents-G";
 
@@ -29,15 +30,15 @@ const Skills = () => {
           <div className="skills-rightColumn">
             <p>REACT</p>
             <div className="skill-container">
-              <div className="skill react">43%</div>
+              <div className="skill react">73%</div>
             </div>
             <p>JavaScript</p>
             <div className="skill-container">
               <div className="skill javascript">68%</div>
             </div>
-            <p>REACT REDUX & CONTEXT</p>
+            <p>Shopify</p>
             <div className="skill-container">
-              <div className="skill redux">10%</div>
+              <div className="skill shopify">75%</div>
             </div>
           </div>
         </div>

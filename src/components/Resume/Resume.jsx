@@ -45,13 +45,23 @@ const Resume = () => {
           </div>
           <div className="professional-experience">
             <h3>Professional Experience</h3>
+
+            <div className="resume-card">
+              <h4>React Developer</h4>
+              <p>
+                <strong>2022 - Present</strong>
+              </p>
+              <p>Devi8 Studio - Sofia</p>
+            </div>
+
             <div className="resume-card">
               <h4>Fontend Developer</h4>
               <p>
-                <strong>2020 - Present</strong>
+                <strong>2020 - 2022</strong>
               </p>
               <p>LittleVitamin - Sofia</p>
             </div>
+
             <div className="resume-card">
               <h4>Hosting Technical Support</h4>
               <p>
@@ -59,6 +69,7 @@ const Resume = () => {
               </p>
               <p>GoDaddy - Sofia</p>
             </div>
+
             <div className="resume-card">
               <h4>Sales represantive</h4>
               <p>
@@ -66,6 +77,7 @@ const Resume = () => {
               </p>
               <p>Telenor - Troyan</p>
             </div>
+
           </div>
         </div>
       </div>

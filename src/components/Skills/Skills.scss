@@ -34,15 +34,15 @@
         background-color: rgb(30, 150, 230);
       }
       .react {
-        width: 43%;
+        width: 73%;
         background-color: rgb(30, 150, 230);
       }
       .javascript {
         width: 68%;
         background-color: rgb(30, 150, 230);
       }
-      .redux {
-        width: 10%;
+      .shopify {
+        width: 75%;
         background-color: rgb(30, 150, 230);
       }
     }
@@ -51,13 +51,13 @@
       flex: 50%;
       margin-right: 1rem;
       p {
-        margin-bottom: .3rem;
+        margin-bottom: 0.3rem;
       }
     }
     .skills-rightColumn {
       flex: 50%;
       p {
-        margin-bottom: .3rem;
+        margin-bottom: 0.3rem;
       }
     }
   }
@@ -98,7 +98,6 @@
     }
   }
 }
-
 
 @media (max-width: 500px) {
   #skills {
