@@ -22,53 +22,53 @@ const Footer = () => {
           <ul className="social-media">
             <li className="twitter">
               <Link
-                to={{ pathname: "https://twitter.com/Ivo_Tsochev" }}
+                to={ { pathname: "https://twitter.com/Ivo_Tsochev" } }
                 target="_blank"
               >
-                <FontAwesomeIcon icon={faTwitter} />
+                <FontAwesomeIcon icon={ faTwitter } />
               </Link>
             </li>
 
             <li className="facebook">
               <Link
-                to={{ pathname: "https://www.facebook.com/Ivo.Tsochev/" }}
+                to={ { pathname: "https://www.facebook.com/Ivo.Tsochev/" } }
                 target="_blank"
               >
-                <FontAwesomeIcon icon={faFacebook} />
+                <FontAwesomeIcon icon={ faFacebook } />
               </Link>
             </li>
 
             <li className="instagram">
               <Link
-                to={{ pathname: "https://www.instagram.com/ivotsochev/" }}
+                to={ { pathname: "https://www.instagram.com/ivotsochev/" } }
                 target="_blank"
               >
-                <FontAwesomeIcon icon={faInstagram} />
+                <FontAwesomeIcon icon={ faInstagram } />
               </Link>
             </li>
 
             <li className="linkedin">
               <Link
-                to={{ pathname: "https://www.linkedin.com/in/ivaylotsochev/" }}
+                to={ { pathname: "https://www.linkedin.com/in/ivaylotsochev/" } }
                 target="_blank"
               >
-                <FontAwesomeIcon icon={faLinkedin} />
+                <FontAwesomeIcon icon={ faLinkedin } />
               </Link>
             </li>
 
             <li className="github">
               <Link
-                to={{ pathname: "https://github.com/IvoTsochev" }}
+                to={ { pathname: "https://github.com/IvoTsochev" } }
                 target="_blank"
               >
-                <FontAwesomeIcon icon={faGithub} />
+                <FontAwesomeIcon icon={ faGithub } />
               </Link>
             </li>
           </ul>
         </Router>
       </div>
       <p>© Copyright IvayloTsochev. All Rights Reserved</p>
-      <p>Designed by If40</p>
+      <p className="crafted">Crafted by <a href="https://headless.team">Headless Team</a></p>
     </div>
   );
 };

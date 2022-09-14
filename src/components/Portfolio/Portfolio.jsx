@@ -12,7 +12,7 @@ const Portfolio = () => {
 
   // portfolios URL
   const baseURL =
-    "https://resources.ivaylotsochev.com/wp-json/wp/v2/portfolios";
+    "https://api.ivaylotsochev.com/wp-json/wp/v2/portfolios";
 
   // fetching portfolios
   // Effect
@@ -36,9 +36,9 @@ const Portfolio = () => {
         </p>
 
         <div className="singlePortfolioItem-wrapper">
-          {Portfolios.map((item) => (
-            <SinglePortfolioItem key={item.id} singlePortfolio={item} />
-          ))}
+          { Portfolios.map((item) => (
+            <SinglePortfolioItem key={ item.id } singlePortfolio={ item } />
+          )) }
         </div>
       </div>
     </div>
