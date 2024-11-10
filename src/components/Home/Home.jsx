@@ -1,4 +1,4 @@
-import Typed from "react-typed";
+import {ReactTyped} from "react-typed";
 import { Link, BrowserRouter as Router } from "react-router-dom";
 // Styles
 import "./Home.scss";
@@ -14,19 +14,19 @@ import {
 function Home() {
   return (
     <div id="home">
-      <Router>
         <div className="home-overlay"></div>
         <div className="home-info">
           <h1>Ivaylo Tsochev</h1>
           <div className="im-wrapper">
             <span>I am </span>
-            <Typed
+            <ReactTyped
               className="Iam-type"
               strings={["Front-end developer", "Freelancer"]}
               typeSpeed={40}
               backSpeed={50}
               loop
-            ></Typed>
+            >
+            </ReactTyped>
           </div>
           <ul className="social-media">
             <li className="twitter">
@@ -75,7 +75,6 @@ function Home() {
             </li>
           </ul>
         </div>
-      </Router>
     </div>
   );
 }

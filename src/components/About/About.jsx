@@ -10,7 +10,6 @@ import { H2Title } from "../../StyledComponents-G";
 const About = () => {
   return (
     <div id="about">
-      <Router>
         <div className="about-wrapper">
           <div className="about-upperSection">
             <H2Title>ABOUT</H2Title>
@@ -97,7 +96,6 @@ const About = () => {
             </div>
           </div>
         </div>
-      </Router>
     </div>
   );
 };

@@ -18,7 +18,6 @@ const Footer = () => {
         Feel free to contact via the social networks or the contact form above.
       </p>
       <div className="footer-social">
-        <Router>
           <ul className="social-media">
             <li className="twitter">
               <Link
@@ -65,7 +64,6 @@ const Footer = () => {
               </Link>
             </li>
           </ul>
-        </Router>
       </div>
       <p>© Copyright IvayloTsochev. All Rights Reserved</p>
       <p className="crafted">Crafted by <a href="https://headless.team">Headless Team</a></p>
