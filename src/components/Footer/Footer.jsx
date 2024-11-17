@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 // Styles
 import "./Footer.scss";
+import packageJson from "../../../package.json";
 
 const Footer = () => {
   return (
@@ -66,6 +67,7 @@ const Footer = () => {
           </ul>
       </div>
       <p>© Copyright IvayloTsochev. All Rights Reserved</p>
+      <p>{packageJson.version}</p>
       <p className="crafted">Crafted by <a href="https://headless.team">Headless Team</a></p>
     </div>
   );

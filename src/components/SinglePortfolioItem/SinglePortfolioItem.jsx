@@ -5,8 +5,6 @@ import axios from "axios";
 const SinglePortfolioItem = ({ singlePortfolio }) => {
   const { title, excerpt, featured_media, acf } = singlePortfolio;
 
-  console.log(singlePortfolio);
-
   //   State
   const [featuredImageUrl, setFeaturedImageUrl] = useState("");
 
@@ -21,7 +19,7 @@ const SinglePortfolioItem = ({ singlePortfolio }) => {
 
   return (
     <div className="singlePortfolioItem">
-      <a href={ acf.project_url } target='_blank'>
+      <a href={ acf.project_url } target='_blank' rel="noreferrer">
         <h4>{ title.rendered }</h4>
         <img className="singlePortfolioItem-img" src={ featuredImageUrl } alt="" />
         <div dangerouslySetInnerHTML={ { __html: excerpt.rendered } } />
