@@ -39,6 +39,13 @@ export default function Portfolio() {
 
   const experienceData = [
     {
+      company: "DSK Bank",
+      position: "Frontend Engineer",
+      period: "2025 - Present",
+      description:
+        "Developed and maintained user-facing features using modern frontend technologies. Collaborated with design and backend teams to deliver high-quality products. Ensured the technical feasibility of UI/UX designs.",
+    },
+    {
       company: "Devi8 Studio",
       position: "React Developer",
       period: "2022 - 2025",
@@ -344,14 +351,14 @@ export default function Portfolio() {
                 best to get back to you!
               </p>
 
-              <div className="grid md:grid-cols-3 gap-6 mb-12">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                 <a
                   href="mailto:hello@example.com"
                   className="flex flex-col items-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-green-500 transition-all hover:bg-gray-800/80 group"
                 >
                   <Mail size={32} className="text-green-400 mb-4 group-hover:scale-110 transition-transform" />
                   <h3 className="text-lg font-bold mb-2">Email</h3>
-                  <p className="text-gray-400 text-center">ivaylo@headless.team</p>
+                  <p className="text-gray-400 text-center" style={{ wordBreak: 'break-word' }}>ivaylo@headless.team</p>
                 </a>
 
                 <a
@@ -362,7 +369,7 @@ export default function Portfolio() {
                 >
                   <Github size={32} className="text-green-400 mb-4 group-hover:scale-110 transition-transform" />
                   <h3 className="text-lg font-bold mb-2">GitHub</h3>
-                  <p className="text-gray-400 text-center">https://github.com/IvoTsochev</p>
+                  <p className="text-gray-400 text-center" style={{ wordBreak: 'break-word' }}>https://github.com/IvoTsochev</p>
                 </a>
 
                 <a
@@ -373,7 +380,7 @@ export default function Portfolio() {
                 >
                   <Linkedin size={32} className="text-green-400 mb-4 group-hover:scale-110 transition-transform" />
                   <h3 className="text-lg font-bold mb-2">LinkedIn</h3>
-                  <p className="text-gray-400 text-center">https://www.linkedin.com/in/ivaylotsochev/</p>
+                  <p className="text-gray-400 text-center" style={{ wordBreak: 'break-word' }}>https://www.linkedin.com/in/ivaylotsochev/</p>
                 </a>
               </div>
 
