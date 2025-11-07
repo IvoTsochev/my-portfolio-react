@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 
 const PasswordReset = () => {
   const [password, setPassword] = useState('');
@@ -8,7 +8,6 @@ const PasswordReset = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [message, setMessage] = useState('');
-  const navigate = useNavigate();
   const [searchParams] = useSearchParams();
 
   // Initialize Supabase client
