@@ -1,30 +1,34 @@
-import { useEffect, useRef, useState, useMemo } from "react"
-import { ChevronDown, Github, Linkedin, Mail } from "lucide-react"
-import { Typewriter } from 'react-simple-typewriter';
-import TroyanskiBiznesi from '../img/troyanski_biznesi.png';
+import { useEffect, useRef, useState, useMemo } from "react";
+import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
+import { Typewriter } from "react-simple-typewriter";
+import TroyanskiBiznesi from "../img/troyanski_biznesi.png";
 
 export default function Portfolio() {
-  const [activeSection, setActiveSection] = useState("home")
+  const [activeSection, setActiveSection] = useState("home");
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const experienceRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
-  
-  const sectionRefs = useMemo(() => ({
-    home: homeRef,
-    about: aboutRef,
-    experience: experienceRef,
-    projects: projectsRef,
-    contact: contactRef,
-  }), [])
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const sectionRefs = useMemo(
+    () => ({
+      home: homeRef,
+      about: aboutRef,
+      experience: experienceRef,
+      projects: projectsRef,
+      contact: contactRef,
+    }),
+    []
+  );
 
   // Sample data - replace with your own
   const aboutData = {
     name: "Ivo Tsochev",
     title: "React Developer",
     description:
-      "I craft beautiful, responsive user interfaces with React, React Native, and Next.js. Passionate about creating seamless user experiences with modern frontend technologies.",
+      "Crafting clean, responsive user interfaces with React, React Native, and Next.js, with a focus on performance, accessibility, and seamless cross-device user experiences.",
     location: "Sofia",
     skills: [
       "React",
@@ -35,7 +39,7 @@ export default function Portfolio() {
       "Framer Motion",
       "Responsive Design",
     ],
-  }
+  };
 
   const experienceData = [
     {
@@ -66,38 +70,38 @@ export default function Portfolio() {
       description:
         "Provided technical support for web hosting services. Assisted customers with domain management, website setup, and troubleshooting.",
     },
-  ]
+  ];
 
   const projectsData = [
     {
       name: "Троянски Бизнеси",
       description:
         "A platform for local businesses in Troyan, Bulgaria. It allows users to discover and connect with local services and products. Available on iOS, Android and Huawei AppGallery",
-      technologies: ["React", "React-Native", "TypeScript", "Nativewind", "Supabase"],
+      technologies: [
+        "React",
+        "React-Native",
+        "TypeScript",
+        "Nativewind",
+        "Supabase",
+      ],
       link: "https://troyanskibiznesi.headless.team/",
       preview: TroyanskiBiznesi,
-
-    }
-  ]
-
+    },
+  ];
 
   // Typing effect for section titles
   const TypedText = ({ text }) => {
     return (
       <span>
-        <Typewriter 
-          words={[text]} 
+        <Typewriter
+          words={[text]}
           loop={1} // Runs only once
-          typeSpeed={100} 
+          typeSpeed={100}
           cursor
         />
       </span>
     );
   };
-  
-  
-  
-  
 
   // Intersection Observer for active section
   useEffect(() => {
@@ -105,27 +109,31 @@ export default function Portfolio() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveSection(entry.target.id)
+            setActiveSection(entry.target.id);
           }
-        })
+        });
       },
-      { threshold: 0.75 },
-    )
+      { threshold: 0.75 }
+    );
 
-    Object.values(sectionRefs).forEach((ref) => ref.current && observer.observe(ref.current))
+    Object.values(sectionRefs).forEach(
+      (ref) => ref.current && observer.observe(ref.current)
+    );
 
     return () => {
-      Object.values(sectionRefs).forEach((ref) => ref.current && observer.unobserve(ref.current))
-    }
-  }, [sectionRefs])
+      Object.values(sectionRefs).forEach(
+        (ref) => ref.current && observer.unobserve(ref.current)
+      );
+    };
+  }, [sectionRefs]);
 
   // Smooth scroll to section
   const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId)
+    const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" })
+      section.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-300 font-mono">
@@ -138,22 +146,29 @@ export default function Portfolio() {
           </div>
 
           <nav className="hidden md:flex space-x-6">
-            {["home", "about", "experience", "projects", "contact"].map((item) => (
-              <button
-                key={item}
-                onClick={() => scrollToSection(item)}
-                className={`text-sm transition-colors ${
-                  activeSection === item ? "text-green-400" : "text-gray-400 hover:text-white"
-                }`}
-              >
-                <span className="text-green-400">/</span>
-                {item}
-              </button>
-            ))}
+            {["home", "about", "experience", "projects", "contact"].map(
+              (item) => (
+                <button
+                  key={item}
+                  onClick={() => scrollToSection(item)}
+                  className={`text-sm transition-colors ${
+                    activeSection === item
+                      ? "text-green-400"
+                      : "text-gray-400 hover:text-white"
+                  }`}
+                >
+                  <span className="text-green-400">/</span>
+                  {item}
+                </button>
+              )
+            )}
           </nav>
 
           {/* Mobile menu button */}
-          <button className="md:hidden text-gray-400 hover:text-white">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden text-gray-400 hover:text-white focus:outline-none"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -161,16 +176,65 @@ export default function Portfolio() {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              {
+                isMenuOpen ? (
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M6 18L18 6M6 6l12 12" 
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )
+              }
             </svg>
           </button>
         </div>
       </header>
 
+      {/* Mobile Navigation Menu */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 z-40 bg-gray-900/95 backdrop-blur-sm md:hidden">
+          <div className="container mx-auto px-4 pt-20">
+            <nav className="flex flex-col items-center space-y-6">
+              {["home", "about", "experience", "projects", "contact"].map(
+                (item) => (
+                  <button
+                    key={item}
+                    onClick={() => {
+                      scrollToSection(item);
+                      setIsMenuOpen(false); // Close menu on selection
+                    }}
+                    className={`text-lg transition-colors ${
+                      activeSection === item
+                        ? "text-green-400"
+                        : "text-gray-400 hover:text-white"
+                    }`}
+                  >
+                    <span className="text-green-400">/</span>
+                    {item}
+                  </button>
+                )
+              )}
+            </nav>
+          </div>
+        </div>
+      )}
+
       {/* Main Content */}
       <main className="pt-16">
         {/* Hero Section */}
-        <section id="home" ref={sectionRefs.home} className="min-h-screen flex flex-col justify-center px-4">
+        <section
+          id="home"
+          ref={sectionRefs.home}
+          className="min-h-screen flex flex-col justify-center px-4"
+        >
           <div className="container mx-auto">
             <div className="max-w-3xl">
               <div className="flex items-center mb-2">
@@ -180,8 +244,12 @@ export default function Portfolio() {
               <h1 className="text-4xl md:text-6xl font-bold mb-4">
                 Hi, I'm <span className="text-green-400">{aboutData.name}</span>
               </h1>
-              <h2 className="text-2xl md:text-3xl text-gray-400 mb-6">{aboutData.title}</h2>
-              <p className="text-lg mb-8 leading-relaxed">{aboutData.description}</p>
+              <h2 className="text-2xl md:text-3xl text-gray-400 mb-6">
+                {aboutData.title}
+              </h2>
+              <p className="text-lg mb-8 leading-relaxed">
+                {aboutData.description}
+              </p>
               <div className="flex space-x-4">
                 <button
                   onClick={() => scrollToSection("contact")}
@@ -218,17 +286,21 @@ export default function Portfolio() {
             <div className="grid md:grid-cols-2 gap-12">
               <div>
                 <p className="text-lg mb-6 leading-relaxed">
-                  I'm a frontend developer specializing in building exceptional digital experiences. Currently, I'm
-                  focused on building responsive, accessible, and performant web applications with modern technologies.
+                  I'm a frontend developer specializing in building exceptional
+                  digital experiences. Currently, I'm focused on building
+                  responsive, accessible, and performant web applications with
+                  modern technologies.
                 </p>
                 <p className="text-lg mb-6 leading-relaxed">
-                  My expertise spans across the React ecosystem, including React Native for mobile development and
-                  Next.js for server-rendered applications. I'm passionate about clean code, user experience, and
-                  staying up-to-date with the latest frontend trends.
+                  My expertise spans across the React ecosystem, including React
+                  Native for mobile development and Next.js for server-rendered
+                  applications. I'm passionate about clean code, user
+                  experience, and staying up-to-date with the latest frontend
+                  trends.
                 </p>
                 <p className="text-lg mb-6 leading-relaxed">
-                  When I'm not coding, you can find me exploring new technologies or
-                  enjoying outdoor activities.
+                  When I'm not coding, you can find me exploring new
+                  technologies or enjoying outdoor activities.
                 </p>
               </div>
 
@@ -239,7 +311,10 @@ export default function Portfolio() {
                 </h3>
                 <div className="flex flex-wrap gap-2 mb-8">
                   {aboutData.skills.map((skill, index) => (
-                    <span key={index} className="px-3 py-1 bg-gray-800 rounded-md text-sm border border-gray-700">
+                    <span
+                      key={index}
+                      className="px-3 py-1 bg-gray-800 rounded-md text-sm border border-gray-700"
+                    >
                       {skill}
                     </span>
                   ))}
@@ -250,7 +325,8 @@ export default function Portfolio() {
                   Location
                 </h3>
                 <p className="text-lg">
-                  <span className="text-gray-400">Based in:</span> {aboutData.location}
+                  <span className="text-gray-400">Based in:</span>{" "}
+                  {aboutData.location}
                 </p>
               </div>
             </div>
@@ -258,7 +334,11 @@ export default function Portfolio() {
         </section>
 
         {/* Experience Section */}
-        <section id="experience" ref={sectionRefs.experience} className="py-20 px-4 bg-gray-950">
+        <section
+          id="experience"
+          ref={sectionRefs.experience}
+          className="py-20 px-4 bg-gray-950"
+        >
           <div className="container mx-auto">
             <div className="flex items-center mb-12">
               <span className="text-green-400 mr-2">$</span>
@@ -279,7 +359,9 @@ export default function Portfolio() {
                     </div>
                     <p className="text-gray-400">{job.period}</p>
                   </div>
-                  <p className="text-lg leading-relaxed max-w-3xl">{job.description}</p>
+                  <p className="text-lg leading-relaxed max-w-3xl">
+                    {job.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -287,7 +369,11 @@ export default function Portfolio() {
         </section>
 
         {/* Projects Section */}
-        <section id="projects" ref={sectionRefs.projects} className="py-20 px-4">
+        <section
+          id="projects"
+          ref={sectionRefs.projects}
+          className="py-20 px-4"
+        >
           <div className="container mx-auto">
             <div className="flex items-center mb-12">
               <span className="text-green-400 mr-2">$</span>
@@ -311,11 +397,16 @@ export default function Portfolio() {
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-green-400 mb-2">{project.name}</h3>
+                    <h3 className="text-xl font-bold text-green-400 mb-2">
+                      {project.name}
+                    </h3>
                     <p className="text-gray-300 mb-4">{project.description}</p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech, techIndex) => (
-                        <span key={techIndex} className="px-2 py-1 bg-gray-700 rounded-md text-xs">
+                        <span
+                          key={techIndex}
+                          className="px-2 py-1 bg-gray-700 rounded-md text-xs"
+                        >
                           {tech}
                         </span>
                       ))}
@@ -326,7 +417,8 @@ export default function Portfolio() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center text-green-400 hover:underline"
                     >
-                      <span className="text-green-400 mr-2">&gt;</span> View Project
+                      <span className="text-green-400 mr-2">&gt;</span> View
+                      Project
                     </a>
                   </div>
                 </div>
@@ -336,7 +428,11 @@ export default function Portfolio() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" ref={sectionRefs.contact} className="py-20 px-4 bg-gray-950">
+        <section
+          id="contact"
+          ref={sectionRefs.contact}
+          className="py-20 px-4 bg-gray-950"
+        >
           <div className="container mx-auto">
             <div className="flex items-center mb-12">
               <span className="text-green-400 mr-2">$</span>
@@ -356,9 +452,17 @@ export default function Portfolio() {
                   href="mailto:hello@example.com"
                   className="flex flex-col items-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-green-500 transition-all hover:bg-gray-800/80 group"
                 >
-                  <Mail size={32} className="text-green-400 mb-4 group-hover:scale-110 transition-transform" />
+                  <Mail
+                    size={32}
+                    className="text-green-400 mb-4 group-hover:scale-110 transition-transform"
+                  />
                   <h3 className="text-lg font-bold mb-2">Email</h3>
-                  <p className="text-gray-400 text-center" style={{ wordBreak: 'break-word' }}>ivaylo@headless.team</p>
+                  <p
+                    className="text-gray-400 text-center"
+                    style={{ wordBreak: "break-word" }}
+                  >
+                    ivaylo@headless.team
+                  </p>
                 </a>
 
                 <a
@@ -367,9 +471,17 @@ export default function Portfolio() {
                   rel="noopener noreferrer"
                   className="flex flex-col items-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-green-500 transition-all hover:bg-gray-800/80 group"
                 >
-                  <Github size={32} className="text-green-400 mb-4 group-hover:scale-110 transition-transform" />
+                  <Github
+                    size={32}
+                    className="text-green-400 mb-4 group-hover:scale-110 transition-transform"
+                  />
                   <h3 className="text-lg font-bold mb-2">GitHub</h3>
-                  <p className="text-gray-400 text-center" style={{ wordBreak: 'break-word' }}>https://github.com/IvoTsochev</p>
+                  <p
+                    className="text-gray-400 text-center"
+                    style={{ wordBreak: "break-word" }}
+                  >
+                    https://github.com/IvoTsochev
+                  </p>
                 </a>
 
                 <a
@@ -378,9 +490,17 @@ export default function Portfolio() {
                   rel="noopener noreferrer"
                   className="flex flex-col items-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-green-500 transition-all hover:bg-gray-800/80 group"
                 >
-                  <Linkedin size={32} className="text-green-400 mb-4 group-hover:scale-110 transition-transform" />
+                  <Linkedin
+                    size={32}
+                    className="text-green-400 mb-4 group-hover:scale-110 transition-transform"
+                  />
                   <h3 className="text-lg font-bold mb-2">LinkedIn</h3>
-                  <p className="text-gray-400 text-center" style={{ wordBreak: 'break-word' }}>https://www.linkedin.com/in/ivaylotsochev/</p>
+                  <p
+                    className="text-gray-400 text-center"
+                    style={{ wordBreak: "break-word" }}
+                  >
+                    https://www.linkedin.com/in/ivaylotsochev/
+                  </p>
                 </a>
               </div>
 
@@ -402,11 +522,12 @@ export default function Portfolio() {
       <footer className="border-t border-gray-800 py-8 px-4 text-center text-sm text-gray-500">
         <div className="container mx-auto">
           <p className="mb-4">
-            <span className="text-green-400">$</span> echo "Designed & Built by {aboutData.name}"
+            <span className="text-green-400">$</span> echo "Designed & Built by{" "}
+            {aboutData.name}"
           </p>
           <p>© {new Date().getFullYear()} All Rights Reserved</p>
         </div>
       </footer>
     </div>
-  )
+  );
 }
