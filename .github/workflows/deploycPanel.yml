@@ -19,4 +19,4 @@ jobs:
               server: ivaylotsochev.com
               username: github@ivaylotsochev.com
               password: ${{ secrets.FTP_PASS }}
-              local-dir: ./build
+              local-dir: ./build/
