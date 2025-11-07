@@ -16,6 +16,7 @@ jobs:
           - name: Deploy build code
             uses: SamKirkland/FTP-Deploy-Action@v4.3.6
             with:
-              server: ${{ secrets.FTP_SERVER }}
-              username: ${{ secrets.FTP_USERNAME }}
+              server: ivaylotsochev.com
+              username: github@ivaylotsochev.com
               password: ${{ secrets.FTP_PASS }}
+              local-dir: ./build
